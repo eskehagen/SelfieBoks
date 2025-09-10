@@ -1,0 +1,4 @@
+opencv-python      # Til kamera-funktionalitet (cv2)
+Pillow             # Til at håndtere billeder (PIL/ImageTk)
+async-tkinter-loop # Til at køre asyncio sammen med Tkinter
+bleak              # Til Bluetooth
