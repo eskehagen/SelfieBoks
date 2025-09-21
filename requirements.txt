@@ -1,4 +1,5 @@
 opencv-python      # Til kamera-funktionalitet (cv2)
 Pillow             # Til at håndtere billeder (PIL/ImageTk)
+picamera2          # Til pi kamera
 async-tkinter-loop # Til at køre asyncio sammen med Tkinter
 bleak              # Til Bluetooth
