@@ -1,0 +1,10 @@
+# requirements_pi.txt — kun pip-pakker til Raspberry Pi
+#
+# BEMÆRK: PyQt6, picamera2, numpy og Pillow installeres via apt (se install_pi.sh)
+#
+# Installation:
+#   source .venv/bin/activate
+#   pip install -r requirements_pi.txt
+
+bleak         # Bluetooth Low Energy til ESP32
+dropbox       # Dropbox SDK til fil-upload

@@ -1,0 +1,29 @@
+[Unit]
+Description=SelfieBoks — Selfie Photo Booth
+After=graphical-session.target bluetooth.target network.target
+Wants=bluetooth.target
+
+[Service]
+Type=simple
+# Opdater 'User' og 'WorkingDirectory' til din Pi-bruger og installationssti
+User=pi
+WorkingDirectory=/home/pi/selfieboks
+
+# Vent på at X/Wayland display er klar
+Environment=DISPLAY=:0
+Environment=XAUTHORITY=/home/pi/.Xauthority
+Environment=QT_QPA_PLATFORM=xcb
+Environment=QT_LOGGING_RULES=*.debug=false;qt.qpa.*=false
+
+ExecStart=/home/pi/selfieboks/.venv/bin/python /home/pi/selfieboks/main.py
+
+# Genstart automatisk ved nedbrud
+Restart=on-failure
+RestartSec=5s
+
+# Log til systemd journal
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=graphical-session.target

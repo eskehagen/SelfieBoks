@@ -1,5 +1,7 @@
-opencv-python      # Til kamera-funktionalitet (cv2)
-Pillow             # Til at håndtere billeder (PIL/ImageTk)
-picamera2          # Til pi kamera
-async-tkinter-loop # Til at køre asyncio sammen med Tkinter
-bleak              # Til Bluetooth
+PyQt6        # UI framework – hardware-accelereret rendering, erstatter Tkinter
+picamera2    # Officielt Pi kamera-bibliotek (IMX519 / IMX708 etc.)
+qasync       # asyncio + Qt event loop bridge, erstatter async-tkinter-loop
+bleak        # Bluetooth Low Energy til ESP32
+dropbox      # Dropbox SDK til fil-upload
+Pillow       # Billedhåndtering (fallback + mock kamera)
+numpy        # Array-baseret frame-behandling i kamera-callbacken
